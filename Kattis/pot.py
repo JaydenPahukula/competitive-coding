@@ -1,0 +1,1 @@
+print(sum([int(num[:-1])**int(num[-1]) for num in [input() for _ in range(int(input()))]]))

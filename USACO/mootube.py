@@ -1,4 +1,3 @@
-import heapq
 import sys
 
 sys.stdin=open("mootube.in","r")

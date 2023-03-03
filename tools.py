@@ -17,19 +17,14 @@ def isPermutation(n1:int, n2:int):
     if len(s) != len(str(n2)):
         return False
 
-    d = {}
+    d = {c: 0 for c in set(str(n2))}
     for c in str(n2):
-        if c in d:
-            d[c] += 1
-        else:
-            d[c] = 1
+        d[c] += 1
     
     for c in s:
-        if c not in d:
-            return False
+        if c not in d: return False
         d[c] -= 1
-        if d[c] < 0:
-            return False
+        if d[c] < 0: return False
     return True
 
 def isPrime(n:int):

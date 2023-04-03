@@ -24,3 +24,4 @@ for _ in range(Q):
                 numDiscovered += 1
                 q.append((vid, min(relevance, currRelevance), currVid))
     
+    print(numDiscovered)

@@ -1,1 +1,2 @@
-print(" ".join(sorted(input().split())))
+a,b = sorted(input().split())
+print(a,b)

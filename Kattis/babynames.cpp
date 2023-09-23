@@ -7,7 +7,9 @@ using namespace __gnu_pbds;
 int main() {
 	cin.tie(0)->sync_with_stdio(0);
 	cin.exceptions(cin.failbit);
+    
     tree<string, null_type, less<string>, rb_tree_tag, tree_order_statistics_node_update> m,f;
+
     while(true){
         int type;cin >> type;
         if (type == 0) break;

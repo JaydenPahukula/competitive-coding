@@ -1,13 +1,5 @@
-def numOptions(targetLength:int, currLength:int=0):
-    ways = 0
-    for addedPiece in [1, 2, 3]:
-        newLength = currLength + addedPiece
-        if newLength > targetLength:
-            pass
-        elif newLength == targetLength:
-            ways += 1
-        else:
-            ways += numOptions(targetLength, newLength)
-    return ways
-
-print(numOptions(int(input())))
+def f(t:int, c:int=0):
+ if t<c:return 0
+ if t==c:return 1
+ return sum([f(t, c+d)for d in(1,2,3)])
+print(f(int(input())))

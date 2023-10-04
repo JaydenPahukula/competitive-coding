@@ -1,0 +1,1 @@
+print("".join(map(str, range(2,999))))

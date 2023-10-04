@@ -1,0 +1,1 @@
+print(["Either","Odd","Either","Even","Either","Odd","Either","Even","Either","Odd"][int(input())-1])

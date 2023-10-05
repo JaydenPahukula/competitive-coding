@@ -81,9 +81,8 @@ int main(){
 
     double expectedValue = 0;
     rep(i, 0, n){
-        cout << plantv[i] << " " << plantcoords[i] << " " << circlePoly(plantcoords[i], r, corners) << " " << area << "\n";
         expectedValue += plantv[i] * circlePoly(plantcoords[i], r, corners) / area;
     }
     
-    cout << expectedValue<<"\n";
+    cout << fixed << setprecision(10) << expectedValue<<"\n";
 }

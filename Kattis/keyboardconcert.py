@@ -20,8 +20,8 @@
 #         possible = newPossible
 # print(numSwitches)
 
-I=input;R=range;N,M = map(int,I().split());a=[set(map(int,I().split()[1:]))for _ in R(N)];l=list(map(int,I().split()));b={i:{j for j in R(N)if i in a[j]}for i in set(l)};p=list(R(N));o=0
+I=input;N,M=map(int,I().split());R=range(N);a=[set(map(int,I().split()[1:]))for _ in R];l=list(map(int,I().split()));p=list(R);o=0
 for n in l:
  p=[i for i in p if n in a[i]]
- if[]==p:o+=1;p=b[n]
+ if[]==p:o+=1;p={j for j in R if n in a[j]}
 print(o)

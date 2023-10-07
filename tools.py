@@ -4,6 +4,10 @@ def gcd(a:int, b:int):
        a, b = b, a % b
     return abs(a)
 
+from functools import reduce
+def factors(n):
+    return list(set((x, n//x) for x in reduce(list.__add__, ([i, n//i] for i in range(1, int(n**0.5) + 1) if n % i == 0))))
+
 def phi(n:int):
     bigList = [True for i in range(1, n+2)]
     for i in range(2, n+1):

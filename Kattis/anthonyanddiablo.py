@@ -1,0 +1,1 @@
+A,N=map(float,input().split());print(["Diablo is happy!","Need more materials!"][A>N*N*.08])

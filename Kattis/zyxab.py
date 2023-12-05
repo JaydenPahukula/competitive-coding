@@ -1,0 +1,1 @@
+L=len;print(max([s for s in[input()for _ in "."*(int(input()))]if 4<L(s)and L(set(s))==L(s)]or["Neibb"],key=lambda s:(-L(s),s)))

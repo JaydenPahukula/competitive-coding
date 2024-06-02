@@ -108,4 +108,13 @@ def findPrimes(n:int):
                 nums[j] = False
     return primes
 
-
+# Zfunc
+# computes the length of the longest common prefix of a[i:] and a in O(n), except z[0] = 0. (abacaba -> 0010301)
+def Z(a:list):
+    n,l,r = len(a),-1,-1
+    z = [0]*n
+    for i in range(1,n):
+        z[i] = 0 if i >= r else min(r-i,z[i-l])
+        while i + z[i] < n and a[i + z[i]] == a[z[i]]: z[i] += 1
+        if i+z[i] > r: l,r = i,i+z[i]
+    return z
